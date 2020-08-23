@@ -48,10 +48,10 @@ function HeroSection() {
             alignItems='center'
             style={{ height: "100%" }}
           >
-            <Typography gutterBottom='true' color='error' variant='h5'>
+            <Typography gutterBottom color='error' variant='h5'>
               PASSAGGREGATE
             </Typography>
-            <Typography gutterBottom='true' variant='h6'>
+            <Typography gutterBottom variant='h6'>
               Passaggregate is the best online learning plat-form in Nigeria, a
               broad plat-form for Universities, Polytechnics, Secondary Schools
               and Primary Schools.
