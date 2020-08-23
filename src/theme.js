@@ -36,10 +36,6 @@ export const theme = createMuiTheme( {
              root: {
                fontSize: "1.1rem",
              },
-
-             label: {
-               color: "white",
-             },
            },
 
            MuiIconButton: {
@@ -58,7 +54,7 @@ export const theme = createMuiTheme( {
            },
 
            MuiTypography: {
-             color: "seconadry",
+             color: "secondary",
            },
          },
        });
