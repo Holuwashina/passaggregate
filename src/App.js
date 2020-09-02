@@ -2,7 +2,9 @@ import React from "react";
 import Container from "@material-ui/core/Container";
 import Wiget from "./components/Wiget";
 import HeroSection from "./components/HeroSection";
-import Features from "./components/Features";
+import SchoolSelection from "./components/SchoolSelection";
+import PostSchool from "./components/PostSchool";
+import JoinTeam from "./components/JoinTeam";
 
 function App() {
   return (
@@ -11,7 +13,22 @@ function App() {
 
       <Container>
         <HeroSection />
-        <Features />
+        <SchoolSelection />
+        <PostSchool />
+        <JoinTeam />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </Container>
     </div>
   );

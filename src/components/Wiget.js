@@ -1,20 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link, Box } from "@material-ui/core";
-import logo from "../images/logo.png";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
+import { Link, Box, AppBar, Toolbar, IconButton } from "@material-ui/core";
 import AccountCircle from "@material-ui/icons/AccountCircle";
-import CallIcon from "@material-ui/icons/Call";
 import MenuIcon from "@material-ui/icons/Menu";
-import WhatsAppIcon from "@material-ui/icons/WhatsApp";
-import EmailIcon from "@material-ui/icons/Email";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import WigetIcon from "../listRenderingComponents/WigetIcon";
-import wigetIconsData from "../listData/wigetIconsData";
-
+import { wigetIconsData } from "../listData/wigetIconsData";
+import logo from "../images/logo.png";
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {
@@ -37,10 +27,6 @@ const useStyles = makeStyles((theme) => ({
 function Wiget() {
   const classes = useStyles();
 
-  const IconsList = wigetIconsData.map((icon) => (
-    <WigetIcon key={icon.id} icon={icon}></WigetIcon>
-  ));
-
   return (
     <AppBar color='secondary' position='fixed'>
       <Toolbar variant='dense'>
@@ -59,7 +45,13 @@ function Wiget() {
 
         <div style={{ width: "100%" }}>
           <Box display='flex' justifyContent='center'>
-            {IconsList}
+
+            {wigetIconsData.map((icon) => (
+              <Link key={icon.id} href={icon.link}>
+                <IconButton>{icon.name}</IconButton>
+              </Link>
+            ) )}
+            
           </Box>
         </div>
 
