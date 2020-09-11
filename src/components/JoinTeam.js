@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function JoinTeam() {
+function JoinTeam () {
   const classes = useStyles();
 
   return (

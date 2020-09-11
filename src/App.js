@@ -3,8 +3,11 @@ import Container from "@material-ui/core/Container";
 import Wiget from "./components/Wiget";
 import HeroSection from "./components/HeroSection";
 import SchoolSelection from "./components/SchoolSelection";
-import PostSchool from "./components/PostSchool";
+import UtmePostutme from "./components/UtmePostutme";
 import JoinTeam from "./components/JoinTeam";
+import Support from '../src/components/Support';
+import Footer from '../src/components/Footer';
+
 
 function App() {
   return (
@@ -14,8 +17,11 @@ function App() {
       <Container>
         <HeroSection />
         <SchoolSelection />
-        <PostSchool />
+        <UtmePostutme/>
         <JoinTeam />
+        <Support />
+        <Footer />
+
         <br />
         <br />
         <br />

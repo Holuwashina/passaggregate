@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Wiget() {
+function Wiget () {
   const classes = useStyles();
 
   return (

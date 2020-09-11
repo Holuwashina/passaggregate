@@ -7,35 +7,61 @@ export const selectSchoolData = [
     index: 0,
     img: uniStudent,
     platform: "University",
-    schoolLists: {
-      default: "DEFAULT",
-      one: "TASUED",
-      two: "LAUTECH",
-      three: "OAU",
-    },
+    
   },
 
   {
     index: 1,
     img: polyStudent,
     platform: "Polytechnic",
-    schoolLists: {
-      default: "DEFAULT",
-      one: "POLY IBADAN",
-      two: "LASPOTECH",
-      three: "IRE POLY",
-    },
+    
   },
 
   {
     index: 2,
     img: secStudent,
     platform: "Secondary School",
-    schoolLists: {
-      default: "DEFAULT",
-      one: "JSS",
-      two: "SSS",
-    },
+    
   },
 ];
 
+export const universityList = [
+  {
+    index: 0,
+    school: "TASUED",
+  },
+  {
+    index: 1,
+    school: "LAUTECH",
+  },
+  {
+    index: 2,
+    school: "UNILAG",
+  },
+];
+
+export const polyList = [
+  {
+    index: 0,
+    school: "POLY IBADAN",
+  },
+  {
+    index: 1,
+    school: "LASPOTECH",
+  },
+  {
+    index: 2,
+    school: "IRE POLY",
+  },
+];
+
+export const secList = [
+  {
+    index: 0,
+    school: "JSS",
+  },
+  {
+    index: 1,
+    school: "SSS",
+  },
+];

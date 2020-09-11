@@ -36,7 +36,7 @@ export const theme = createMuiTheme({
     body2: {
       fontWeight: 700,
       letterSpacing: "0.05em",
-      fontSize: ".7rem",
+      fontSize: ".75rem",
     },
   },
 
@@ -73,7 +73,7 @@ export const theme = createMuiTheme({
 
     MuiTab: {
       root: {
-        fontSize: "0.6rem",
+        fontSize: "0.64rem",
         fontWeight: "900",
       },
     },
@@ -105,6 +105,12 @@ export const theme = createMuiTheme({
         color: "red",
         fontSize: "0.7rem",
         fontWeight: 600,
+      },
+    },
+
+    MuiAlert: {
+      icon: {
+        fontSize: "18px",
       },
     },
   },
