@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography, Button } from "@material-ui/core";
+import GraphicEqIcon from "@material-ui/icons/GraphicEq";
 import { supportList } from "../listData/supportListData";
 
 const useStyles = makeStyles((theme) => ({
@@ -51,7 +52,7 @@ function Support() {
             Passaggregate is looking for brands willing to support our project
             and be featured on our site.
           </Typography>
-          <Button>Learn more</Button>
+          <Button endIcon={<GraphicEqIcon />}>Learn more</Button>
         </Grid>
       </Grid>
     </div>

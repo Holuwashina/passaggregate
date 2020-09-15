@@ -80,8 +80,8 @@ export const theme = createMuiTheme({
 
     MuiTabs: {
       root: {
-        marginTop: 40,
-        marginBottom: 40,
+        marginTop: 10,
+        marginBottom: 10,
       },
     },
 
@@ -91,6 +91,16 @@ export const theme = createMuiTheme({
         fontSize: "0.9rem",
         fontWeight: 600,
       },
+    },
+
+    MuiFormControlLabel: {
+      root: {
+        '& span': {
+          color: "red",
+          fontSize: ".7rem"
+
+        }
+      }
     },
 
     MuiMenuItem: {

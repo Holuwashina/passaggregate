@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Button, Box, Typography } from "@material-ui/core";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import heroBg from "../images/hero-bg.svg";
 import heroRight from "../images/hero.svg";
 
@@ -63,7 +64,9 @@ function HeroSection() {
               broad plat-form for Universities, Polytechnics, and Secondary
               Schools.
             </Typography>
-            <Button>Explore</Button>
+            <Button endIcon={<ExpandMoreIcon />}>
+              Explore
+            </Button>
           </Box>
         </Grid>
 

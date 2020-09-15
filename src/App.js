@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 import Container from "@material-ui/core/Container";
-import Wiget from "./components/Wiget";
-import HeroSection from "./components/HeroSection";
-import SchoolSelection from "./components/SchoolSelection";
-import UtmePostutme from "./components/UtmePostutme";
-import JoinTeam from "./components/JoinTeam";
-import Support from '../src/components/Support';
-import Footer from '../src/components/Footer';
+import Wiget from "./sections/Wiget";
+import HeroSection from "./sections/HeroSection";
+import SchoolSelection from "./sections/SchoolSelection";
+import UtmePostutme from "./sections/UtmePostutme";
+import JoinTeam from "./sections/JoinTeam";
+import Support from '../src/sections/Support';
+import Footer from '../src/sections/Footer';
 
 
-function App() {
+function App () {
   return (
     <div className='app'>
       <Wiget />
@@ -17,7 +17,7 @@ function App() {
       <Container>
         <HeroSection />
         <SchoolSelection />
-        <UtmePostutme/>
+        <UtmePostutme />
         <JoinTeam />
         <Support />
         <Footer />

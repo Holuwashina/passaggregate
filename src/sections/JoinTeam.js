@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Box, Typography, Button } from "@material-ui/core";
+import GraphicEqIcon from "@material-ui/icons/GraphicEq";
 import team from "../images/Team.svg";
 
 const useStyles = makeStyles((theme) => ({
@@ -19,13 +20,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("lg")]: {
       paddingRight: theme.spacing(21),
     },
-  },
-
-  buttonText: {
-    color: "red",
-    fontWeight: 700,
-    fontSize: "0.7rem",
-    letterSpacing: "0.06em",
   },
 }));
 
@@ -52,9 +46,7 @@ function JoinTeam () {
               academic tutor, online instructor and anyone who is ready to add
               value to this project...
             </Typography>
-            <Button className={classes.buttonText} variant='text'>
-              Learn more...
-            </Button>
+            <Button endIcon={<GraphicEqIcon />}>Learn more</Button>
           </Box>
         </Grid>
       </Grid>
