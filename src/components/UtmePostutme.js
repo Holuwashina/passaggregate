@@ -9,25 +9,13 @@ import {
   Typography,
   Box,
   Grid,
-  InputLabel,
-  MenuItem,
-  FormControl,
-  Select,
   Card,
   CardActions,
   CardMedia,
   CardContent,
   Button,
-  TextField,
   Divider,
-  Icon
 } from "@material-ui/core";
-import {
-  selectSchoolData,
-  universityList,
-  polyList,
-  secList,
-} from "../listData/selectSchoolData";
 import jamb from "../images/jamb.jpg";
 
 const useStyles = makeStyles((theme) => ({
@@ -44,14 +32,14 @@ const useStyles = makeStyles((theme) => ({
 
   card: {
     display: "flex",
-    maxWidth: "400px",
-    minWidth: "290px",
+    maxWidth: "420px",
+    minWidth: "300px",
   },
 
   cardHeader: {
     backgroundColor: theme.palette.secondary.main,
     color: "white",
-    padding: "5px 15px",
+    padding: "10px 15px",
   },
 
   details: {

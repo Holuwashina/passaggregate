@@ -36,7 +36,7 @@ function JoinTeam () {
     <div className={classes.root}>
       <Grid container justify='center' alignItems='center'>
         <Grid item xs={12} md={6}>
-          <img src={team} height='300px' width='100%' alt='' />
+          <img src={team} height='300px' width='90%' alt='' />
         </Grid>
         <Grid item xs={12} md={6}>
           <Box

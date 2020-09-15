@@ -73,7 +73,7 @@ export const theme = createMuiTheme({
 
     MuiTab: {
       root: {
-        fontSize: "0.64rem",
+        fontSize: "0.6rem",
         fontWeight: "900",
       },
     },

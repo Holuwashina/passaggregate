@@ -2,11 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Alert from "@material-ui/lab/Alert";
-import CenterFocusWeakIcon from "@material-ui/icons/CenterFocusWeak";
+import SendIcon from "@material-ui/icons/Send";
 import {
   Tabs,
   Tab,
-  Typography,
   Box,
   Grid,
   InputLabel,
@@ -40,12 +39,15 @@ const useStyles = makeStyles((theme) => ({
   img: {
     width: "60%",
     margin: "auto",
+    [theme.breakpoints.down("sm")]: {
+      width: "90%",
+    },
   },
 
   card: {
-    minWidth: "370px",
+    minWidth: "400px",
     [theme.breakpoints.only("xs")]: {
-      minWidth: "290px",
+      minWidth: "300px",
     },
   },
 
@@ -68,8 +70,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   alert: {
-    marginBottom: theme.spacing(2)
-  }
+    marginBottom: theme.spacing(2),
+  },
 }));
 
 function TabPanel(props) {
@@ -177,12 +179,12 @@ export default function SchoolSelection() {
                     label='Selected'
                     value={university}
                   />
-                    <Button
-                      size='small'
-                      disabled={university === "DEFAULT"}
-                      endIcon={<CenterFocusWeakIcon />}
-                    >
-                    Continue
+                  <Button
+                    size='small'
+                    disabled={university === "DEFAULT"}
+                    endIcon={<SendIcon />}
+                  >
+                    Explore
                   </Button>
                 </CardActions>
               </Card>
