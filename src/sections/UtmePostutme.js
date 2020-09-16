@@ -1,29 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import Alert from "@material-ui/lab/Alert";
-import CenterFocusWeakIcon from "@material-ui/icons/CenterFocusWeak";
-import SlowMotionVideoIcon from "@material-ui/icons/SlowMotionVideo";
+import GraphicEqIcon from "@material-ui/icons/GraphicEq";
 import {
   Tabs,
   Tab,
-  Typography,
   Box,
   Grid,
-  Card,
-  CardActions,
-  CardMedia,
-  CardContent,
   Button,
-  Divider,
-  Radio,
-  RadioGroup,
-  FormControlLabel,
 } from "@material-ui/core";
-import { universityData, polytechnicData } from "../listData/selectSchoolData";
 import jamb from "../images/jamb.jpg";
 import postUtme from "../images/post-utme.jpg";
-import University from "../components/University";
+import UtmePostutmeCard from "../components/UtmePostutmeCard";
+import RadioBtn from "../components/RadioBtn";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,30 +23,6 @@ const useStyles = makeStyles((theme) => ({
   grid: {
     display: "flex",
     justifyContent: "center",
-  },
-
-  card: {
-    display: "flex",
-    maxWidth: "420px",
-    minWidth: "300px",
-  },
-
-  cardHeader: {
-    color: "red",
-  },
-
-  details: {
-    display: "flex",
-    flexDirection: "column",
-  },
-
-  cover: {
-    width: 200,
-  },
-
-  form: {
-    margin: "15px 0",
-    minWidth: "250px",
   },
 }));
 
@@ -92,15 +57,10 @@ function a11yProps(index) {
 export default function UtmePostutme() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-  const [radio, setRadio] = React.useState("university");
   const [isVisible, setIsVisible] = React.useState(false);
 
   const handleIsVisible = () => {
     setIsVisible(true);
-  };
-
-  const handleRadio = (event) => {
-    setRadio(event.target.value);
   };
 
   const handleChange = (event, newValue) => {
@@ -117,33 +77,12 @@ export default function UtmePostutme() {
       <TabPanel value={value} index={0}>
         <Grid container justify='center' alignItems='center'>
           <Grid className={classes.grid} item xs={12} sm={10} md={8}>
-            <Card className={classes.card}>
-              <div className={classes.details}>
-                <CardContent>
-                  <Typography
-                    className={classes.cardHeader}
-                    gutterBottom
-                    component='h6'
-                    variant='h6'
-                  >
-                    UTME / JAMB CBT
-                  </Typography>
-                  <Typography gutterBottom component='p' variant='body2'>
-                    Score very high in your upcoming UTME practicing past
-                    questions. No excuse for failure!!!
-                  </Typography>
-                  <Alert severity='info'>
-                    <span>&#8358;</span>
-                    {"1,000"} / Month
-                  </Alert>
-                </CardContent>
-                <Divider variant='middle' />
-                <CardActions>
-                  <Button endIcon={<CenterFocusWeakIcon />}>Subscribe</Button>
-                </CardActions>
-              </div>
-              <CardMedia className={classes.cover} image={jamb}></CardMedia>
-            </Card>
+            <UtmePostutmeCard 
+            btn= {<Button size='small' endIcon={<GraphicEqIcon />}>Explore</Button> } 
+            heading= "UTME"
+            img= {jamb}
+            price= "1,000"
+            />
           </Grid>
         </Grid>
       </TabPanel>
@@ -151,75 +90,18 @@ export default function UtmePostutme() {
       <TabPanel value={value} index={1}>
         <Grid container justify='center' alignItems='center'>
           <Grid className={classes.grid} item xs={12} sm={10} md={8}>
-            <Card className={classes.card}>
-              <div className={classes.details}>
-                <CardContent>
-                  {isVisible ? (
-                    <>
-                      <RadioGroup
-                        row
-                        aria-label='School'
-                        value={radio}
-                        onChange={handleRadio}
-                      >
-                        <FormControlLabel
-                          label='University'
-                          value='university'
-                          control={<Radio />}
-                        />
-                        <FormControlLabel
-                          label='Polytechnic'
-                          value='polytechnic'
-                          control={<Radio />}
-                        />
-                      </RadioGroup>
-
-                      {radio === "university" && (
-                        <University platform={universityData} />
-                      )}
-                      {radio === "polytechnic" && (
-                        <University platform={polytechnicData} />
-                      )}
-                    </>
-                  ) : (
-                    <>
-                      <Typography
-                        className={classes.cardHeader}
-                        gutterBottom
-                        component='h6'
-                        variant='h6'
-                      >
-                        POST-UTME CBT
-                      </Typography>
-                      <Typography gutterBottom component='p' variant='body2'>
-                        Score very high in your upcoming POST-UTME practicing
-                        past questions. No excuse for failure!!!
-                      </Typography>
-                      <Alert severity='info'>
-                        <span>&#8358;</span>
-                        {"1,500"} / Month
-                      </Alert>
-                    </>
-                  )}
-                </CardContent>
-                <Divider variant='middle' />
-                <CardActions>
-                  <Button
-                    onClick={handleIsVisible}
-                    endIcon={<SlowMotionVideoIcon />}
-                  >
-                    Start
-                  </Button>
-                  <Button endIcon={<CenterFocusWeakIcon />}>Subscribe</Button>
-                </CardActions>
-              </div>
-              {isVisible ? null : (
-                <CardMedia
-                  className={classes.cover}
-                  image={postUtme}
-                ></CardMedia>
-              )}
-            </Card>
+          {
+          isVisible 
+          ? 
+          <RadioBtn />
+          : 
+          <UtmePostutmeCard 
+          btn= {<Button onClick={handleIsVisible} size='small' endIcon={<GraphicEqIcon />}>Explore</Button> }
+          heading= "POST-UTME"
+          img= {postUtme}
+          price= "1,500"
+          />
+          }
           </Grid>
         </Grid>
       </TabPanel>

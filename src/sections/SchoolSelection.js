@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import { Tabs, Tab, Box, Grid, Card, CardContent } from "@material-ui/core";
+import { Tabs, Tab, Box, Grid } from "@material-ui/core";
 import {
   selectSchoolData,
   universityData,
@@ -21,13 +21,6 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     [theme.breakpoints.down("sm")]: {
       width: "90%",
-    },
-  },
-
-  card: {
-    maxWidth: "400px",
-    [theme.breakpoints.only("xs")]: {
-      minWidth: "300px",
     },
   },
 
@@ -90,8 +83,7 @@ export default function SchoolSelection() {
             </Grid>
 
             <Grid className={classes.grid} item sm={12} md={7}>
-              <Card className={classes.card}>
-                <CardContent>
+              
                   {platform.index === 0 && (
                     <University platform={universityData} />
                   )}
@@ -103,8 +95,7 @@ export default function SchoolSelection() {
                   {platform.index === 2 && (
                     <University platform={secondaryData} />
                   )}
-                </CardContent>
-              </Card>
+                
             </Grid>
           </Grid>
         </TabPanel>

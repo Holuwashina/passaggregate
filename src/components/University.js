@@ -8,6 +8,8 @@ import {
   FormControl,
   Select,
   TextField,
+  Card,
+  CardContent,
   Button
 } from "@material-ui/core";
 
@@ -15,6 +17,13 @@ const useStyles = makeStyles((theme) => ({
   form: {
     margin: "15px 0",
     minWidth: "250px",
+  },
+
+  card: {
+    maxWidth: "400px",
+    [theme.breakpoints.only("xs")]: {
+      minWidth: "300px",
+    },
   },
 }));
 
@@ -24,13 +33,14 @@ function University ( { platform } ) {
   const classes = useStyles();
   const [university, setUniversity] = React.useState("DEFAULT");
 
-  console.log(university);
   const handleUniversity = (event) => {
     setUniversity( event.target.value );
   };
 
   return (
     <>
+    <Card className={classes.card}>
+      <CardContent>
       <Alert severity='info'>Select your prefered institution below to continue</Alert>
       <FormControl
         className={classes.form}
@@ -69,6 +79,8 @@ function University ( { platform } ) {
       >
         Explore
       </Button>
+      </CardContent>
+     </Card>
     </>
   );
 }
