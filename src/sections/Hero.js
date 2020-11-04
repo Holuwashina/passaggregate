@@ -24,8 +24,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   textLeft: {
-    [theme.breakpoints.up("sm")]: {},
-
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
       padding: theme.spacing(2),
@@ -41,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function HeroSection() {
+function Hero() {
   const classes = useStyles();
 
   return (
@@ -63,7 +61,7 @@ function HeroSection() {
               Passaggregate is the best online learning plat-form in Nigeria, a
               broad plat-form for Universities, Polytechnics, and Secondary
               Schools.
-            </Typography>
+            </Typography> 
             <Button endIcon={<ExpandMoreIcon />}>
               Explore
             </Button>
@@ -78,4 +76,4 @@ function HeroSection() {
   );
 }
 
-export default HeroSection;
+export default Hero;

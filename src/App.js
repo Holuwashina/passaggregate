@@ -1,24 +1,23 @@
 import React from 'react';
-import Container from "@material-ui/core/Container";
-import Wiget from "./sections/Wiget";
-import HeroSection from "./sections/HeroSection";
-import SchoolSelection from "./sections/SchoolSelection";
-import UtmePostutme from "./sections/UtmePostutme";
-import JoinTeam from "./sections/JoinTeam";
+import Container from '@material-ui/core/Container';
+import NavBar from './sections/NavBar';
+import Hero from './sections/Hero';
+import Platform from './sections/Platform';
+import Prospective from './sections/Prospective';
+import Team from './sections/Team';
 import Support from '../src/sections/Support';
 import Footer from '../src/sections/Footer';
 
-
-function App () {
+function App() {
   return (
     <div className='app'>
-      <Wiget />
+      <NavBar />
 
       <Container>
-        <HeroSection />
-        <SchoolSelection />
-        <UtmePostutme />
-        <JoinTeam />
+        <Hero />
+        <Platform />
+        <Prospective />
+        <Team />
         <Support />
         <Footer />
 

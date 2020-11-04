@@ -24,8 +24,16 @@ export const secondaryData = [
   },
 ];
 
+export const utmeData = [
+  {
+    index: "UTME Subjects",
+    list: [ "ENGLISH", "MATHEMATICS", "LITERATURE","PHYSICS" ],
+    
+  },
+];
 
-export const selectSchoolData = [
+
+export const platformData = [
   {
     index: 0,
     img: uniStudent,

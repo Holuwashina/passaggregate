@@ -28,32 +28,31 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-function University ( { platform } ) {
-  const [ { index, list } ] = platform;
+function SelectionCard ( {platform, message} ) {
+  const [ {index, list} ] = platform;
   const classes = useStyles();
-  const [university, setUniversity] = React.useState("DEFAULT");
+  const [select, setSelect] = React.useState("DEFAULT");
 
-  const handleUniversity = (event) => {
-    setUniversity( event.target.value );
+  const handleSelect = (event) => {
+    setSelect( event.target.value );
   };
 
   return (
     <>
     <Card className={classes.card}>
       <CardContent>
-      <Alert severity='info'>Select your prefered institution below to continue</Alert>
+      <Alert severity='info'>{message}</Alert>
       <FormControl
         className={classes.form}
         fullWidth
         size='small'
         variant='outlined'
       >
-        <InputLabel id='demo'>{index}</InputLabel>
+        <InputLabel>{index}</InputLabel>
         <Select
-          id='University'
-          value={university}
-          onChange={handleUniversity}
-          label='University'
+          value={select}
+          onChange={handleSelect}
+          label={index}
         >
           <MenuItem value='DEFAULT'>DEFAULT</MenuItem>
           {list.map((school) => (
@@ -66,15 +65,14 @@ function University ( { platform } ) {
       <TextField
         size='small'
         variant='outlined'
-        id='outlined-disabled'
         disabled
         label='Selected'
-        value={university}
+        value={select}
       />
       <Button
         style={{ margin: "4px 10px 0" }}
         size='small'
-        disabled={university === "DEFAULT"}
+        disabled={select === "DEFAULT"}
         endIcon={<GraphicEqIcon />}
       >
         Explore
@@ -85,4 +83,4 @@ function University ( { platform } ) {
   );
 }
 
-export default University;
+export default SelectionCard;

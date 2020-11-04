@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function JoinTeam () {
+function Team () {
   const classes = useStyles();
 
   return (
@@ -54,4 +54,4 @@ function JoinTeam () {
   );
 }
 
-export default JoinTeam;
+export default Team;

@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Wiget () {
+function NavBar () {
   const classes = useStyles();
 
   return (
@@ -63,4 +63,4 @@ function Wiget () {
   );
 }
 
-export default Wiget;
+export default NavBar;
